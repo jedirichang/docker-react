@@ -9,14 +9,14 @@ before_install:
   - docker build -t jedirichang/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true jedirichang/docker-react npm run test
+  - docker run -e CI=true jedirichang/docker-react npm run test rcvbgb 
 
 deploy:
   provider: elasticbeanstalk
   region: "ap-south-1"
   app: "docker-react"
   env: "Docker-react-env"
-  bucket_name: "elasticbeanstalk-ap-south-1-435390226700"
+  bucket_name: "elasticbeanstalk-ap-south-1-615299754589"
   bucket_path: "docker-react"
   on:
     branch: main
